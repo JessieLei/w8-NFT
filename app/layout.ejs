@@ -19,7 +19,16 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Paytone+One"
+    />
     <link rel="stylesheet" href="./assets/style/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/b0cef0236c.js"
       crossorigin="anonymous"
@@ -28,15 +37,17 @@
 
   <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container justify-content-between">
+      <div class="container">
         <div class="py-lg-4 py-xl-8">
           <a
-            class="navbar-brand d-inline-block align-middle"
+            class="navbar-brand align-middle flex-grow-1"
             href="index.html"
           ></a>
         </div>
         <!-- pc搜尋框 -->
-        <div class="search d-none d-lg-block d-lg-flex align-items-lg-center">
+        <div
+          class="search flex-grow-0 d-none d-lg-block d-lg-flex align-items-lg-center"
+        >
           <div
             class="border-start border-1 border-black py-lg-7 px-lg-9 py-xl-9 px-xl-5"
           >
@@ -56,7 +67,7 @@
           <!-- pc navbar -->
           <div class="pc-navbar border-start border-1 border-black">
             <a
-              href="#"
+              href="explore.html"
               class="text-nowrap fw-bold text-black py-lg-7 px-lg-9 py-xl-9 px-xl-5"
               >探索</a
             >
@@ -72,7 +83,7 @@
           <div class="pc-navbar border-start border-1 border-black">
             <a
               href="#"
-              class="wallet text-nowrap fw-bold text-black py-lg-7 px-lg-9 py-xl-9 px-xl-5"
+              class="wallet text-nowrap fw-bold text-black py-lg-7 ps-lg-9 py-xl-9 ps-xl-5"
               ><i class="fa-solid fa-wallet fs-3"></i
             ></a>
           </div>
@@ -80,7 +91,7 @@
 
         <!-- mobile搜尋框 -->
         <div class="d-flex justify-content-between align-items-end d-lg-none">
-          <a href="#"
+          <a href="#" class="navbar-search"
             ><i
               class="fa-solid fa-magnifying-glass text-black align-middle fz-18"
             ></i
@@ -100,6 +111,35 @@
         </div>
       </div>
 
+      <!-- monile搜尋框展開 -->
+      <div class="search-bar-open d-none d-lg-none bg-light pt-2 fixed-top">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center">
+            <button
+              type="button"
+              class="search-bar-back btn btn-link text-black shadow-none"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control bg-transparent border-0 shadow-none"
+                placeholder="搜尋作品名稱、藝術家名稱"
+                aria-describedby="search-arts"
+              />
+              <button
+                class="btn bg-transparent border-0 shadow-none"
+                type="button"
+                id="search-arts"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="nav-border"></div>
 
       <div class="container-fluid bg-white mb-0 d-lg-none">
@@ -111,7 +151,7 @@
               <a
                 class="p-0 fw-bold nav-link active"
                 aria-current="page"
-                href="#"
+                href="explore.html"
                 >探索</a
               >
             </li>
@@ -166,6 +206,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
       integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"

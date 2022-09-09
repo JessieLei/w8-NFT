@@ -1,0 +1,134 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  &-wrapper {
+    @include lg {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-img {
+    height: auto;
+  }
+  button {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    padding: 8px 48px;
+    @include lg {
+      display: none;
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  background: transparent;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+  width: 100%;
+  height: 232px;
+  padding-bottom: 48px;
+
+  @include lg {
+    padding-bottom: 24px;
+  }
+  img {
+    display: block;
+    object-fit: cover;
+    max-width: none;
+    width: 100%;
+
+    @include lg {
+      width: 220px;
+      height: 220px;
+    }
+    @include xl {
+      width: 270px;
+      height: 262px;
+    }
+    @include xxl {
+      width: 306px;
+      height: 262px;
+    }
+  }
+  &-prev {
+    justify-content: flex-start;
+  }
+  &-next {
+    justify-content: flex-end;
+  }
+  &-active {
+    filter: grayscale(0%);
+    z-index: 1;
+    img {
+      @include lg {
+        width: 439px;
+        height: 439px;
+      }
+      @include xl {
+        width: 530px;
+        height: 439px;
+      }
+      @include xxl {
+        width: 636px;
+        height: 439px;
+      }
+    }
+    button,
+    .artist-name,
+    .artist-txt-lg {
+      @include lg {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.swiper-pagination {
+  position: unset; //繼承父層或還原初始值
+  width: auto;
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    background-color: $black;
+    opacity: initial; //還原默認值
+    &-active {
+      width: 16px;
+      background-color: $primary;
+    }
+  }
+}
+
+.artist {
+  &-name {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 32px;
+    @include lg {
+      display: none;
+      font-size: 80px;
+    }
+  }
+
+  &-txt {
+    padding: 24px;
+    width: 100%;
+    &-lg {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      padding: 24px;
+      width: 200px;
+      opacity: 0.85;
+      @include xl {
+        width: 307px;
+      }
+    }
+  }
+}

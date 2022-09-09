@@ -1,3 +1,201 @@
 .fz-18 {
   font-size: 18px;
 }
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-40 {
+  font-size: 40px;
+}
+
+.fz-xl-48 {
+  font-size: 24px;
+  @include xl {
+    font-size: 48px;
+  }
+}
+
+.fz-xl-32 {
+  font-size: 24px;
+  @include xl {
+    font-size: 32px;
+  }
+}
+
+.fw-lg-bold {
+  @include lg {
+    font-weight: bold !important;
+  }
+}
+
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.h-396 {
+  @include xl {
+    height: 396px;
+  }
+}
+
+.h-268 {
+  @include xl {
+    height: 268px;
+  }
+}
+
+.h-md-464 {
+  @include md {
+    height: 464px;
+  }
+}
+
+.border-xl-black {
+  @include xl {
+    border: 1px solid #000000 !important;
+  }
+}
+
+.w-xl-50 {
+  @include xl {
+    width: 50%;
+  }
+}
+
+.mb-xl-minus1 {
+  @include xl {
+    margin-bottom: -1px;
+  }
+}
+
+.mt-xl-minus1 {
+  @include xl {
+    margin-top: -1px;
+  }
+}
+
+.border-right-xl-black {
+  @include xl {
+    border-right: 1px solid #000000 !important;
+  }
+}
+
+.border-bottom-xl-0 {
+  @include xl {
+    border-bottom: 0 !important;
+  }
+}
+
+.border-lg-0 {
+  @include lg {
+    border: 0 !important;
+  }
+}
+
+.border-bottom-lg {
+  @include lg {
+    border-bottom: 1px solid #000000 !important;
+  }
+}
+
+.text-PaytoneOne {
+  font-family: "Paytone One", sans-serif !important;
+}
+
+.text-Noto {
+  font-family: "Noto Sans TC", sans-serif !important;
+}
+
+// 圖片hover效果
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  /*  三角形  */
+  width: 0;
+  height: 0;
+  border-right: 16px solid #e6553b;
+  border-top: 16px solid transparent;
+}
+
+.img-hover {
+  position: relative;
+  background-color: #000;
+  &::after {
+    content: "more";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .triangle {
+    display: block;
+    z-index: -1;
+  }
+}
+
+.img-hover-big {
+  @include lg {
+    position: relative;
+    background-color: #000;
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.ranking-big-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  button {
+    background-color: #e6553b;
+    color: white;
+  }
+  .btn-triangle::after {
+    border-bottom: 16px black solid;
+  }
+}
+
+// 瀑布流hover
+.artwork-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.3s;
+  &:hover {
+    @include sm {
+      opacity: 1;
+    }
+  }
+}
