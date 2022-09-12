@@ -13665,6 +13665,10 @@ ul {
   background-repeat: no-repeat;
   width: 85px;
   height: 18px;
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media (min-width: 992px) {
@@ -13700,6 +13704,7 @@ ul {
   outline: none;
   border: 0;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .pc-navbar {
